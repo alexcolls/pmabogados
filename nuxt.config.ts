@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   modules: [
+    '@nuxtjs/eslint-module',
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/fontaine',

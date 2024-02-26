@@ -1,10 +1,13 @@
-title: Nuxt UI Pro - Landing template
-description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+title: ABOGADO IA
+version: BETA
+description: ABOGADO IA es una plataforma de inteligencia artificial que te ayuda a resolver tus problemas legales de manera rápida y sencilla.
+menu:
+  features: Jurisprudencias
 hero:
-  title: Build your landing in seconds
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+  title: Un abogado en tu bolsillo
+  description: ABOGADO IA es una plataforma de inteligencia artificial que te ayuda a resolver tus problemas legales de manera rápida y sencilla.
   headline:
-    label: Made with Nuxt UI Pro
+    label: La IA más avanzada del mercado
     to: https://ui.nuxt.com/pro
     icon: i-heroicons-arrow-top-right-on-square-20-solid
   links:
@@ -29,7 +32,7 @@ logos:
     - i-simple-icons-cloudflare
 features:
   headline: Features
-  title: Why choose our service?
+  title: Porque elegir ABOGADO IA
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   items:
     - title: Easy to use

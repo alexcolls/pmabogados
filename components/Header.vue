@@ -2,8 +2,13 @@
 const nuxtApp = useNuxtApp()
 const { activeHeadings, updateHeadings } = useScrollspy()
 
+const { data: content } = await useAsyncData(
+  'index', () => queryContent('/').findOne()
+);
+
+
 const links = computed(() => [{
-  label: 'Features',
+  label: content.value.menu.features,
   to: '#features',
   icon: 'i-heroicons-cube-transparent',
   active: activeHeadings.value.includes('features') && !activeHeadings.value.includes('pricing')
@@ -37,11 +42,15 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
 <template>
   <UHeader :links="links">
     <template #logo>
-      Nuxt UI Pro <UBadge label="Landing" variant="subtle" class="mb-0.5" />
+      {{ content.title }}
+      <UBadge :label="content.version" variant="subtle" class="mb-0.5" />
     </template>
 
     <template #right>
-      <UButton label="Sign in" color="white" variant="ghost" trailing-icon="i-heroicons-arrow-right-20-solid" class="hidden lg:flex" />
+      <UButton 
+        label="Sign in" 
+        color="white" variant="ghost" trailing-icon="i-heroicons-arrow-right-20-solid"
+        class="hidden lg:flex" />
     </template>
 
     <template #panel>

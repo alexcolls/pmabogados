@@ -1,16 +1,31 @@
 module.exports = {
   root: true,
   extends: [
-    '@nuxt/eslint-config'
+    '@nuxt/eslint-config',
+    '@nuxtjs/eslint-config-typescript'
   ],
+  parserOptions: {
+    parser: '@typescript-eslint/parser'
+  },
   rules: {
-    // Global
-    semi: ['error', 'never'],
+    semi: ['error', 'always'],
     quotes: ['error', 'single'],
-    'quote-props': ['error', 'as-needed'],
-    // Vue
-    'vue/multi-word-component-names': 0,
-    'vue/max-attributes-per-line': 'off',
-    'vue/no-v-html': 0
+    'max-len': ['error', { code: 80 }],
+    'vue/multi-word-component-names': 'off',
+    'vue/no-multiple-template-root': 'off',
+    'vue/singleline-html-element-content-newline': [
+      'error',
+      {
+        ignoreWhenNoAttributes: false,
+        ignoreWhenEmpty: true
+      }
+    ],
+    'vue/multiline-html-element-content-newline': [
+      'error',
+      {
+        ignoreWhenEmpty: true
+      }
+    ],
+    'vue/require-default-prop': 'off'
   }
-}
+};
